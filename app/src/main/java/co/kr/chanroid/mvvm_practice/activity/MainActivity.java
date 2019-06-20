@@ -1,12 +1,11 @@
 package co.kr.chanroid.mvvm_practice.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import co.kr.chanroid.mvvm_practice.R;
+import co.kr.chanroid.mvvm_practice.di.DaggerAndroidXActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends DaggerAndroidXActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

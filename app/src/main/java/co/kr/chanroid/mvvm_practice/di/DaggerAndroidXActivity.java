@@ -12,7 +12,6 @@ import dagger.android.AndroidInjection;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
-import dagger.android.HasAndroidInjector;
 
 public abstract class DaggerAndroidXActivity extends AppCompatActivity implements HasActivityInjector {
     @Inject
