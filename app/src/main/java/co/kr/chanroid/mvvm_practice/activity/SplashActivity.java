@@ -27,7 +27,6 @@ public class SplashActivity extends DaggerAndroidXActivity implements ISplashVie
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewDataBinding.setViewModel(viewModel);
         viewModel.start();
     }
 

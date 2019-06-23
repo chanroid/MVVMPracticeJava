@@ -6,19 +6,21 @@ import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
 
+import co.kr.chanroid.mvvm_practice.di.scope.ActivityScope;
 import co.kr.chanroid.mvvm_practice.view.ISplashView;
 import co.kr.chanroid.mvvm_practice.worker.WorkerThreadPoolExecutor;
 
+@ActivityScope
 public class SplashViewModel {
     @Inject
-    public SplashViewModel(ISplashView viewImpl) {
-        this.viewImpl = viewImpl;
+    public SplashViewModel() {
     }
 
     public MutableLiveData<String> loadingText = new MutableLiveData<>();
     public MutableLiveData<Integer> loadingProgress = new MutableLiveData<>();
 
-    private ISplashView viewImpl;
+    @Inject
+    ISplashView viewImpl;
 
     @Inject
     WorkerThreadPoolExecutor threadPoolExecutor;
