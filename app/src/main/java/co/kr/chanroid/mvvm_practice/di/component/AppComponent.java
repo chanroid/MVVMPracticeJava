@@ -4,8 +4,9 @@ import javax.inject.Singleton;
 
 import co.kr.chanroid.mvvm_practice.app.MVVMApplication;
 import co.kr.chanroid.mvvm_practice.di.module.ActivityBindingModule;
-import co.kr.chanroid.mvvm_practice.di.module.AppModule;
+import co.kr.chanroid.mvvm_practice.di.module.ContextBindingModule;
 import co.kr.chanroid.mvvm_practice.di.module.SystemServiceModule;
+import co.kr.chanroid.mvvm_practice.di.module.ViewModule;
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import dagger.android.AndroidInjector;
@@ -13,8 +14,9 @@ import dagger.android.AndroidInjector;
 @Singleton
 @Component(modules = {
         AndroidInjectionModule.class,
-        AppModule.class,
+        ContextBindingModule.class,
         ActivityBindingModule.class,
+        ViewModule.class,
         SystemServiceModule.class
 })
 public interface AppComponent extends AndroidInjector<MVVMApplication> {

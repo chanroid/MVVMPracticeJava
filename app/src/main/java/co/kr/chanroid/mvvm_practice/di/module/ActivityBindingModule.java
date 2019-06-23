@@ -9,7 +9,7 @@ import dagger.android.ContributesAndroidInjector;
 @Module
 public interface ActivityBindingModule {
     @ActivityScope
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector(modules = SplashModule.class)
     SplashActivity bindSplashActivity();
 
     @ActivityScope
