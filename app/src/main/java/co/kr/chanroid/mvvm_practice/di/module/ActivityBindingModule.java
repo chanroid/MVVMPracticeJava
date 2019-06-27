@@ -4,6 +4,7 @@ import co.kr.chanroid.mvvm_practice.activity.MainActivity;
 import co.kr.chanroid.mvvm_practice.activity.SplashActivity;
 import co.kr.chanroid.mvvm_practice.di.scope.ActivityScope;
 import co.kr.chanroid.mvvm_practice.di.scope.FragmentScope;
+import co.kr.chanroid.mvvm_practice.fragment.CameraFragment;
 import co.kr.chanroid.mvvm_practice.fragment.MainFragment;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -21,4 +22,8 @@ public interface ActivityBindingModule {
     @FragmentScope
     @ContributesAndroidInjector(modules = MainFragmentModule.class)
     MainFragment bindMainFragment();
+
+    @FragmentScope
+    @ContributesAndroidInjector
+    CameraFragment bindCameraFragment();
 }

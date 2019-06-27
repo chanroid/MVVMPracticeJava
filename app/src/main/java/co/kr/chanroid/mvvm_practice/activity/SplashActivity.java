@@ -21,7 +21,7 @@ public class SplashActivity extends DaggerAndroidXActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewModel = getViewModel(SplashViewModel.class);
+        viewModel = getViewModelProvider().get(SplashViewModel.class);
         viewDataBinding.setViewModel(viewModel);
 
         viewModel.load().observe(this, integer -> {
