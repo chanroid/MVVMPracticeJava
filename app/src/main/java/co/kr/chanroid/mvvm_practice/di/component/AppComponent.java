@@ -6,6 +6,7 @@ import co.kr.chanroid.mvvm_practice.app.MVVMApplication;
 import co.kr.chanroid.mvvm_practice.di.module.ActivityBindingModule;
 import co.kr.chanroid.mvvm_practice.di.module.ContextBindingModule;
 import co.kr.chanroid.mvvm_practice.di.module.SystemServiceModule;
+import co.kr.chanroid.mvvm_practice.di.module.ViewModelModule;
 import co.kr.chanroid.mvvm_practice.di.module.ViewModule;
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
@@ -16,6 +17,7 @@ import dagger.android.AndroidInjector;
         AndroidInjectionModule.class,
         ContextBindingModule.class,
         ActivityBindingModule.class,
+        ViewModelModule.class,
         ViewModule.class,
         SystemServiceModule.class
 })
