@@ -17,7 +17,7 @@ public class BaseModel {
             for (int i = 0; i <= 100; i++) {
                 try {
                     liveData.postValue(i);
-                    Thread.sleep(500);
+                    Thread.sleep(200);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

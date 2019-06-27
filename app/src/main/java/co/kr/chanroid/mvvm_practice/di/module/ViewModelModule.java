@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import co.kr.chanroid.mvvm_practice.di.ViewModelFactory;
 import co.kr.chanroid.mvvm_practice.di.qualifier.ViewModelKey;
+import co.kr.chanroid.mvvm_practice.viewmodel.MainViewModel;
 import co.kr.chanroid.mvvm_practice.viewmodel.SplashViewModel;
 import dagger.Binds;
 import dagger.Module;
@@ -19,4 +20,9 @@ public interface ViewModelModule {
     @IntoMap
     @ViewModelKey(SplashViewModel.class)
     ViewModel bindSplashViewModel(SplashViewModel viewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(MainViewModel.class)
+    ViewModel bindMainViewModel(MainViewModel viewModel);
 }

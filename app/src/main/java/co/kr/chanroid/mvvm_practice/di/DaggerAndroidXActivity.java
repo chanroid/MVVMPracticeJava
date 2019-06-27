@@ -5,7 +5,6 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -33,8 +32,8 @@ public abstract class DaggerAndroidXActivity extends AppCompatActivity implement
         return androidInjector;
     }
 
-    public  <T extends ViewModel> T getViewModel(Class<T> tClass) {
-        return ViewModelProviders.of(this, getViewModelFactory()).get(tClass);
+    public ViewModelProvider getViewModelProvider() {
+        return ViewModelProviders.of(this, getViewModelFactory());
     }
 
     private ViewModelProvider.Factory getViewModelFactory() {
