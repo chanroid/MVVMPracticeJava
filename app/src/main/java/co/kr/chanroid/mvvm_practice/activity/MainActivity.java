@@ -9,6 +9,7 @@ import co.kr.chanroid.mvvm_practice.R;
 import co.kr.chanroid.mvvm_practice.databinding.MainActivityViewDataBinding;
 import co.kr.chanroid.mvvm_practice.di.DaggerAndroidXActivity;
 import co.kr.chanroid.mvvm_practice.fragment.CameraFragment;
+import co.kr.chanroid.mvvm_practice.fragment.MainFragment;
 import co.kr.chanroid.mvvm_practice.viewmodel.MainViewModel;
 
 public class MainActivity extends DaggerAndroidXActivity {
@@ -25,15 +26,15 @@ public class MainActivity extends DaggerAndroidXActivity {
 
         Toast.makeText(this, viewModel.randomText.getValue(), Toast.LENGTH_LONG).show();
 
-//        MainFragment mainFragment = new MainFragment();
-//        getSupportFragmentManager()
-//                .beginTransaction()
-//                .replace(viewDataBinding.fragmentContainer.getId(), mainFragment)
-//                .commit();
-        CameraFragment cameraFragment = new CameraFragment();
+        MainFragment mainFragment = new MainFragment();
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(viewDataBinding.fragmentContainer.getId(), cameraFragment)
+                .replace(viewDataBinding.fragmentContainer.getId(), mainFragment)
                 .commit();
+//        CameraFragment cameraFragment = new CameraFragment();
+//        getSupportFragmentManager()
+//                .beginTransaction()
+//                .replace(viewDataBinding.fragmentContainer.getId(), cameraFragment)
+//                .commit();
     }
 }

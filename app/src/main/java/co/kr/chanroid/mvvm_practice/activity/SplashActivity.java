@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
-import androidx.lifecycle.Observer;
 
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
@@ -15,8 +14,6 @@ import co.kr.chanroid.mvvm_practice.databinding.SplashViewDataBinding;
 import co.kr.chanroid.mvvm_practice.di.DaggerAndroidXActivity;
 import co.kr.chanroid.mvvm_practice.viewmodel.SplashViewModel;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Action;
-import io.reactivex.functions.Consumer;
 
 public class SplashActivity extends DaggerAndroidXActivity {
 
